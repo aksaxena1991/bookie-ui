@@ -6,22 +6,22 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.3.2",
         "@testing-library/user-event": "^7.1.2",
-        "css-loader": "^3.6.0",
+        "bootstrap": "^5.0.0-alpha1",
+        "bootstrap-icons": "^1.0.0-alpha5",
         "file-loader": "^6.0.0",
+        "materialize-css": "^1.0.0-rc.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "react-scripts": "3.4.1",
-        "style-loader": "^1.2.1"
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "3.4.1"
     },
     "scripts": {
-        "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "webpack-dev-server": "webpack-dev-server",
         "dev": "webpack-dev-server --mode=development",
         "prod": "webpack --mode=production"
-
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -44,8 +44,10 @@
         "@babel/preset-env": "^7.10.4",
         "@babel/preset-react": "^7.10.4",
         "babel-loader": "^8.1.0",
+        "css-loader": "^3.6.0",
         "html-webpack-plugin": "^4.3.0",
         "path": "^0.12.7",
+        "style-loader": "^1.2.1",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0"
