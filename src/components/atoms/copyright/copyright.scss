@@ -1,0 +1,35 @@
+import React, { Component } from 'react';
+import  './navBar.scss';
+import logo from '../../../logo.svg';
+class NavBar extends Component{
+  
+  render(){
+    
+    return(
+      <React.Fragment>
+        <aside className="side-nav col s12">
+          <div className="row">
+          <ul className="col s8">
+            <li><img src={logo}/></li> 
+            <li>Anubhav Saxena</li>
+            <li>ABS Pvt Ltd</li>
+          </ul>
+          <ul className="col s4">
+          <li><i class="material-icons small">notifications</i></li>
+          <li><i class="material-icons small">settings_applications</i></li>
+          </ul>
+          </div>
+          <hr className="break"/>
+          <ul className="list-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </aside>
+
+      </React.Fragment>
+    );
+  }
+      
+    
+}
+export default NavBar;
