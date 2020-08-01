@@ -84,27 +84,18 @@ const useStyles = makeStyles(theme => ({
 const Topbar = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
-  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
   };
-
-  const toggleMenu = () => {
-    console.log(menuOpen);
-    setMenuOpen(!menuOpen);
-  };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  const handleMenu = event => {
-    setAnchorEl(event.currentTarget);
+  const handleDrawerOpen = () => {
+    setOpen(true);
   };
-
   const handleDrawerClose = () => {
     setOpen(false);
   };
@@ -135,29 +126,22 @@ const Topbar = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={toggleMenu}
+              onClick={handleClick}
               color="inherit"
             >
               <AccountCircle />
             </IconButton>
             <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right"
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right"
-              }}
-              open={menuOpen}
-              onClose={toggleMenu}
-            >
-              <MenuItem onClick={toggleMenu}>My Profile</MenuItem>
-              <MenuItem onClick={toggleMenu}>Logout</MenuItem>
-            </Menu>
+        id="menu-appbar"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
           </div>
         </Toolbar>
       </AppBar>
