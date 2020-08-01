@@ -11,6 +11,7 @@ function App() {
       <Switch>
       <Route path="/" component = {LandingPage} />
       
+      
       </Switch>
    </Suspense>
    </Router>
