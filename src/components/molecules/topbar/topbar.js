@@ -15,7 +15,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import Sidebar from "../sidebar/sidebar";
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -67,6 +67,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: {
     display: "flex",
+    
     alignItems: "center",
     justifyContent: "flex-end",
     padding: theme.spacing(0, 1),
@@ -84,7 +85,7 @@ const useStyles = makeStyles(theme => ({
 const Topbar = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
